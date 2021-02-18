@@ -1,3 +1,11 @@
+/*
+* Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. 
+* Each part of such program is called a thread. So, threads are light-weight processes within a process.
+*   Threads can be created by using two mechanisms :
+*   1. Extending the Thread class
+*   2. Implementing the Runnable Interface
+*   This demo is using Thread class  (Thread creation by extending the Thread class)
+*/
 class MultithreadingDemo extends Thread 
 { 
     public void run() 
@@ -5,7 +13,6 @@ class MultithreadingDemo extends Thread
         try
         { 
            System.out.println ("Thread " + Thread.currentThread().getId() + " is running"); 
-           System.out.println(Thread.State.RUNNABLE.name());
         } 
         catch (Exception e) 
         { 
