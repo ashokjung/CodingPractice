@@ -31,5 +31,5 @@ public class SplitIteratorExample {
         System.out.println("Characteristic is Immutable");
 
     }
-    
+
 }
