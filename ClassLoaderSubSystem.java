@@ -3,12 +3,24 @@ import java.lang.reflect.Method;
 
 public class ClassLoaderSubSystem {
 
-    public static void main(String[] args)
+
+       
+        public static void main(String[] args)
     {
         // Getting hold of Class object created 
         // by JVM. 
         Student student = new Student();
+
+        // Alternate way Class is generic, 
+        //if you don't care for the warning you have two choices use 
+        //@SuppressWarnings("rawtypes") to suppress warning
+
+        @SuppressWarnings("rawtypes")
         Class _class  = student.getClass();
+        // use the <?>
+
+        Class<?> _classDef  = student.getClass();
+             
 
         // Printing type of object using
         System.out.println(_class);
@@ -21,7 +33,7 @@ public class ClassLoaderSubSystem {
             System.out.println(method.getName());
         }
 
-        Field f[] = _class.getDeclaredFields();
+        Field f[] = _classDef.getDeclaredFields();
 
         for( Field field : f){
             System.out.println(field.getName());
