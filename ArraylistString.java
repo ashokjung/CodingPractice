@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
 public class ArraylistString
-{public static void main(String args[])
+{
+    public static void main(String args[])
     {
         ArrayList<String> Str = new ArrayList<String>();
+        Str.add("This is the largest String");
         Str.add("Jim Bob");
         Str.add("Bobby Jones");
         Str.add("Rob Stiles");
